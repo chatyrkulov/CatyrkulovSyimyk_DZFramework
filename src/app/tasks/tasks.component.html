@@ -1,1 +1,9 @@
-<p>tasks works!</p>
+<ul>
+	<li *ngFor="let task of all_task" >
+		
+		<input type="checkbox" checked=checked *ngIf="task.isComplete">
+		<span *ngIf="task.isComplete" class="CompText">{{task.name}}</span>
+		<input type="checkbox" *ngIf="task.isComplete == false">
+		<span *ngIf="task.isComplete == false" class="CompText">{{task.name}}</span>
+	</li>
+</ul>
